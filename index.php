@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilosIndex.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="img/icono.png">
@@ -30,7 +30,7 @@
             <h2 class="card-header"><i class="fas fa-shopping-cart"></i> Cliente</h2>
             <div class="card-body">
                 <div class="carrito p-2 border text-center">
-                    
+
                 </div>
             </div>
             <div class="card-footer">
@@ -43,13 +43,13 @@
                             <div id="total" class="form-control bg-light font-weight-bold">
                                 $0.0
                             </div>
-                        </div>                      
+                        </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="float-right">
                             <button type="button" class="comprar-productos btn btn-secondary mb-2" data-toggle="modal" data-target="#caja">
                                     Comprar productos
-                            </button>                                
+                            </button>
                             <a href="#" class="vaciar-carrito btn btn-danger border mb-2">Vaciar Carrito</a>
                         </div>
                     </div>
@@ -59,119 +59,55 @@
     </div>
     <div class="mercado container-fluid bg-secondary pb-5">
         <div class="row">
-            <div class="col-md-4 p-0">
-                <div class="pasillo my-5"></div>
-                <div class="pasillo-1 px-5">
-                    <ul class="seccion">
-                    <?php
-                    $str = file_get_contents('./juegos.json', true);
+            <?php
+                $str = file_get_contents('./juegos.json', true);
 
-                    $json = json_decode($str, true);
-                    $size = count($json);
-                    foreach ($json as $value) {
-                        echo "<li class=\"producto\">
-                            <div class=\"card text-center\">
-                                <p class=\"articulo font-weight-bold card-header\">{$value['nombre_juego']} <i class=\"fas fa-tag\"></i></p>
-                                <span class=\"precio text-muted\">{$value['valor_juego']}$</span>
-                                <div class=\"card-footer\">
-                                    <a href=\"#\" class=\"llevar-articulo btn btn-primary btn-block\" data-id=\"01\">Llevar <i class=\"fas fa-cart-arrow-down\"></i></a>
-                                </div>
+                $json = json_decode($str, true);
+                $size = count($json);
+                $colNum = $size / 4;
+                $colNum = intval($colNum);
+                if($size % 4 !== 0) {
+                    $colNum ++;
+                }
+                $products = array();
+                foreach ($json as $value) {
+                    $product "<li class=\"producto\">
+                        <div class=\"card text-center\">
+                            <p class=\"articulo font-weight-bold card-header\">{$value['nombre_juego']} <i class=\"fas fa-tag\"></i></p>
+                            <span class=\"precio text-muted\">{$value['valor_juego']}$</span>
+                            <div class=\"card-footer\">
+                                <a href=\"#\" class=\"llevar-articulo btn btn-primary btn-block\" data-id=\"01\">Llevar <i class=\"fas fa-cart-arrow-down\"></i></a>
                             </div>
-                        </li>"
+                        </div>
+                    </li>";
+                    array_push($products, $product);
+                }
+                $productIndex = 0;
+                for ($i=1; $i <= $colNum; $i++) {
+                    $colProduct = "
+                    <div class=\"col-md-4 p-0\">
+                        <div class=\"pasillo my-5\"></div>
+                        <div class=\"pasillo-1 px-5\">
+                            <ul class=\"seccion\">
+                    ";
+                    $colProduct .= $products[$i*$productIndex];
+                    $productIndex++;
+                    for ($o=0; $o < 3; $o++) {
+                        if($size < $productIndex) {
+                            $colProduct .= $products[$i*$productIndex];
+                            $productIndex++;
+                        }
                     }
-                    ?>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4 p-0">
-                <div class="pasillo my-5"></div>
-                <div class="pasillo-2 px-5">
-                    <ul class="seccion">
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">MINECRAFT <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$150.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="05">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
+                    $colProduct .= "
+                                </ul>
                             </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">FORNITE <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$100.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="06">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">ROBLOX <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$150.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="07">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">GENSHIN IMPACT <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$250.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="08">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>  
-                    </ul>
-                </div>                        
-            </div>
-            <div class="col-md-4 p-0">
-                <div class="pasillo my-5"></div>
-                <div class="pasillo-3 px-5">
-                    <ul class="seccion">
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">COUNTER-STRIKE <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$180.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="09">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">HALO INFINITE <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$280.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="10">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">ASSASSIN´S CREED <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$170.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="11">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">GOD OF WAR <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$260.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="12">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>   
-                    </ul>
-                </div>                        
-            </div>
+                        </div>";
+                }
+                echo $colProduct;
+            ?>
         </div>
     </div>
-      
+
     <!-- Modal -->
     <div class="modal fade" id="caja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
