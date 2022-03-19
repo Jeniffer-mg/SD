@@ -64,14 +64,14 @@
 
                 $json = json_decode($str, true);
                 $size = count($json);
-                $colNum = $size / 4;
+                $colNum = $size / 3;
                 $colNum = intval($colNum);
-                if($size % 4 !== 0) {
+                if($size % 3 !== 0) {
                     $colNum ++;
                 }
                 $products = array();
                 foreach ($json as $value) {
-                    $product "<li class=\"producto\">
+                    $product = "<li class=\"producto\">
                         <div class=\"card text-center\">
                             <p class=\"articulo font-weight-bold card-header\">{$value['nombre_juego']} <i class=\"fas fa-tag\"></i></p>
                             <span class=\"precio text-muted\">{$value['valor_juego']}$</span>
@@ -82,19 +82,21 @@
                     </li>";
                     array_push($products, $product);
                 }
+                
                 $productIndex = 0;
                 for ($i=1; $i <= $colNum; $i++) {
+                    
                     $colProduct = "
                     <div class=\"col-md-4 p-0\">
                         <div class=\"pasillo my-5\"></div>
                         <div class=\"pasillo-1 px-5\">
                             <ul class=\"seccion\">
                     ";
-                    $colProduct .= $products[$i*$productIndex];
+                    $colProduct .= $products[$productIndex];
                     $productIndex++;
-                    for ($o=0; $o < 3; $o++) {
-                        if($size < $productIndex) {
-                            $colProduct .= $products[$i*$productIndex];
+                    for ($o=0; $o < 2; $o++) {
+                        if($productIndex < $size) {
+                            $colProduct .= $products[$productIndex];
                             $productIndex++;
                         }
                     }
@@ -102,8 +104,9 @@
                                 </ul>
                             </div>
                         </div>";
+                        echo $colProduct;
                 }
-                echo $colProduct;
+                
             ?>
         </div>
     </div>
