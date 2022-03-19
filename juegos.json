@@ -88,6 +88,15 @@
         "valor_juego": 85000,
         "empresa": "NAMCO Studios",
         "valores_iniciales_juego": "SPFO"
+    },
+    {
+        "id_juego": 10,
+        "nombre_juego": "Stranger of Paradise Final Fantasy Origin",
+        "fecha_lanzamiento": "18-03-2022",
+        "descripcion": "Este es un videojuego de accion",
+        "valor_juego": 85000,
+        "empresa": "NAMCO Studios",
+        "valores_iniciales_juego": "SPFO"
     }
 ]
 

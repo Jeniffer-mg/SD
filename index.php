@@ -98,7 +98,7 @@
                     ";
                     $colProduct .= $products[$productIndex];
                     $productIndex++;
-                    for ($o=0; $o < $productsXCol[$i] ; $o++) {
+                    for ($o=0; $o < $productsXCol[$i] - 1 ; $o++) {
                         if($productIndex < $size) {
                             $colProduct .= $products[$productIndex];
                             $productIndex++;
