@@ -15,7 +15,7 @@ $pass = $_POST["txtpassword"];
 
 $query = mysqli_query($conn, "SELECT * FROM  login WHERE usuario = '".$nombre."' and password = '".$pass."'");
 $nr = mysqli_num_rows($query);
-
+echo $nr;
 if($nr == 1){
     //header ("Location: index.html")
     echo "Bienvenid@: " .$nombre;
