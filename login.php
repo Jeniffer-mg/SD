@@ -24,4 +24,9 @@ if($nr == 1){
     echo "No ingreso, usuario incorrecto";
 }
 
+$str = file_get_contents('./juegos.json', true);
+
+$json = json_decode($str, true);
+
+print_r($json, true);
 ?>
