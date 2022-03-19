@@ -57,7 +57,17 @@
             </div>
         </div>
     </div>
-    
+    <?php
+    $str = file_get_contents('./juegos.json', true);
+
+    $json = json_decode($str, true);
+    $size = count($json);
+    echo "<span>$size</span><ul>";
+    foreach ($json as $value) {
+        echo "<li>{$value['nombre_juego']}</li>";
+    }
+    echo "</ul>";
+    ?>
     <div class="mercado container-fluid bg-secondary pb-5">
         <div class="row">
             <div class="col-md-4 p-0">

@@ -19,14 +19,8 @@ $query = mysqli_query($conn, "SELECT * FROM  login WHERE usuario = '".$nombre."'
 $nr = mysqli_num_rows($query);
 if($nr == 1){
     //header ("Location: index.html")
-    echo "Bienvenid@: " .$nombre;
+    header('Location: index.php');
 } else if ($nr == 0){
     echo "No ingreso, usuario incorrecto";
 }
-
-$str = file_get_contents('./juegos.json', true);
-
-$json = json_decode($str, true);
-
-print_r($json, true);
 ?>
