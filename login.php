@@ -1,5 +1,7 @@
 <?php
+
 echo "get into php file";
+
 $dbhos = "localhost";
 $dbuser = "root";
 $dbpass = "";
@@ -19,9 +21,19 @@ echo $nr;
 if($nr == 1){
     //header ("Location: index.html")
     echo "Bienvenid@: " .$nombre;
-}else if ($nr == 0){
+} else if ($nr == 0){
     echo "No ingreso, usuario incorrecto";
 }
-
-
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Page</h1>
+</body>
+</html>
