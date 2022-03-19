@@ -57,59 +57,29 @@
             </div>
         </div>
     </div>
-    <?php
-    $str = file_get_contents('./juegos.json', true);
-
-    $json = json_decode($str, true);
-    $size = count($json);
-    echo "<span>$size</span><ul>";
-    foreach ($json as $value) {
-        echo "<li>{$value['nombre_juego']}</li>";
-    }
-    echo "</ul>";
-    ?>
     <div class="mercado container-fluid bg-secondary pb-5">
         <div class="row">
             <div class="col-md-4 p-0">
                 <div class="pasillo my-5"></div>
                 <div class="pasillo-1 px-5">
                     <ul class="seccion">
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">FIFA <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">120.16$</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="01">Llevar <i class="fas fa-cart-arrow-down"></i></a>
+                    <?php
+                    $str = file_get_contents('./juegos.json', true);
+
+                    $json = json_decode($str, true);
+                    $size = count($json);
+                    foreach ($json as $value) {
+                        echo "<li class=\"producto\">
+                            <div class=\"card text-center\">
+                                <p class=\"articulo font-weight-bold card-header\">{$value['nombre_juego']} <i class=\"fas fa-tag\"></i></p>
+                                <span class=\"precio text-muted\">{$value['valor_juego']}$</span>
+                                <div class=\"card-footer\">
+                                    <a href=\"#\" class=\"llevar-articulo btn btn-primary btn-block\" data-id=\"01\">Llevar <i class=\"fas fa-cart-arrow-down\"></i></a>
                                 </div>
                             </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">GTA <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$400.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="02">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">CONTROL <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$255.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="03">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="producto">
-                            <div class="card text-center">
-                                <p class="articulo font-weight-bold card-header">GRAND THEFT AUTO V <i class="fas fa-tag"></i></p>
-                                <span class="precio text-muted">$220.000</span>
-                                <div class="card-footer">
-                                    <a href="#" class="llevar-articulo btn btn-primary btn-block" data-id="04">Llevar <i class="fas fa-cart-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </li>                        
+                        </li>"
+                    }
+                    ?>
                     </ul>
                 </div>
             </div>
