@@ -1,5 +1,5 @@
 <?php
-
+echo "get into php file";
 $dbhos = "localhost";
 $dbuser = "root";
 $dbpass = "";
