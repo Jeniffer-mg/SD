@@ -64,10 +64,16 @@
 
                 $json = json_decode($str, true);
                 $size = count($json);
+
                 $colNum = $size / 3;
                 $colNum = intval($colNum);
-                if($size % 3 !== 0) {
-                    $colNum ++;
+                $rest =  $size % 3;
+                $productsXCol = [$colNum, $colNum, $colNum];
+                if($rest > 0) {
+                    $productsXCol[0]++;
+                }
+                if($rest > 1) {
+                    $productsXCol[1]++;
                 }
                 $products = array();
                 foreach ($json as $value) {
@@ -82,10 +88,8 @@
                     </li>";
                     array_push($products, $product);
                 }
-                
                 $productIndex = 0;
-                for ($i=1; $i <= $colNum; $i++) {
-                    
+                for ($i = 0; $i < 3; $i++) {
                     $colProduct = "
                     <div class=\"col-md-4 p-0\">
                         <div class=\"pasillo my-5\"></div>
@@ -94,7 +98,7 @@
                     ";
                     $colProduct .= $products[$productIndex];
                     $productIndex++;
-                    for ($o=0; $o < 2; $o++) {
+                    for ($o=0; $o < $productsXCol[$i] ; $o++) {
                         if($productIndex < $size) {
                             $colProduct .= $products[$productIndex];
                             $productIndex++;
