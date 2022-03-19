@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<style>
+    table{
+        border: 2px solid #353A46;
+        background-color: #3ABAF1;
+    }
+    input[type=text], input[type=password]{
+        width: 100%;
+        padding: 8px 20px;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    label{
+        font-size: 14px;
+        font-weight: bold;
+        font-family: arial;
+    }
+    input[type=submit]{
+        background-color: #1C94CB;
+        color: white;
+        padding: 8px 10px;
+        margin: 8px 10px;
+        border: solid;
+        cursor: pointer;
+        width: 40%;
+    }
+</style>
+<body>
+    <center>
+        <form action="" method="post" action="login.php">
+            <table>
+                <tr><td colspan="2" style="background-color: #33abdb; padding-bottom: 5px; padding-top: 5px;"><label>Login</label></td></tr>
+                <tr><td align="center" rowspan="5"><img src="img/img1.png" alt=""></td><td><label>Usuario</label></td></tr>
+                <tr><td><input type="text" name="txtusuario"></td></tr>
+                <tr><td><input type="password" name="txtpassword"></td></tr>
+                <tr><td><input type="submit" value="Ingresar"></td></tr>
+            </table>
+
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,93 @@
+[
+    {
+        "id_juego": 1,
+        "nombre_juego": "FORZA",
+        "fecha_lanzamiento": "01-03-2021",
+        "descripcion": "Este es un juego de carros",
+        "valor_juego": 50000,
+        "empresa": "Microsoft",
+        "valores_iniciales_juego": "FO"
+    },
+    {
+        "id_juego": 2,
+        "nombre_juego": "FIFA",
+        "fecha_lanzamiento": "10-04-2021",
+        "descripcion": "Este es un juego de futbol",
+        "valor_juego": 500000,
+        "empresa": "EA",
+        "valores_iniciales_juego": "FIFA"
+    },
+    {
+        "id_juego": 3,
+        "nombre_juego": "Blue Protocol",
+        "fecha_lanzamiento": "2022",
+        "descripcion": "Este es un videojuego de rol multijugador",
+        "valor_juego": 85000,
+        "empresa": "NAMCO Studios",
+        "valores_iniciales_juego": "BP"
+    },
+    {
+        "id_juego": 4,
+        "nombre_juego": "Star Citizen",
+        "fecha_lanzamiento": "2022",
+        "descripcion": "Este es un videojuego de simulacion espacial",
+        "valor_juego": 90000,
+        "empresa": "Cloud Imperium Games",
+        "valores_iniciales_juego": "SC"
+    },
+    {
+        "id_juego": 5,
+        "nombre_juego": "Dead Island 2",
+        "fecha_lanzamiento": "2023",
+        "descripcion": "Este es un videojuego de accion y rol en un mundo abierto de zombies",
+        "valor_juego": 89000,
+        "empresa": "NAMCO Studios",
+        "valores_iniciales_juego": "DI"
+    },
+    {
+        "id_juego": 6,
+        "nombre_juego": "The Legend of Zelda",
+        "fecha_lanzamiento": "2022",
+        "descripcion": "Es la segunda parte de Breath of the Wild,",
+        "valor_juego": 800000,
+        "empresa": "Nintendo",
+        "valores_iniciales_juego": "LOZ"
+    },
+    {
+        "id_juego": 7,
+        "nombre_juego": "Granblue Fantasy: Relink",
+        "fecha_lanzamiento": "2022",
+        "descripcion": "Este es un videojuego de rol y accion desarrollado por Cygames Osaka",
+        "valor_juego": 85000,
+        "empresa": "NAMCO Studios",
+        "valores_iniciales_juego": "GF"
+    },
+    {
+        "id_juego": 8,
+        "nombre_juego": "Tunic",
+        "fecha_lanzamiento": "16-03-2022",
+        "descripcion": "Este es un videojuego de rol y aventura",
+        "valor_juego": 100000,
+        "empresa": "Finji Games",
+        "valores_iniciales_juego": "TU"
+    },
+    {
+        "id_juego": 9,
+        "nombre_juego": "Grand Theft Auto V",
+        "fecha_lanzamiento": "15-03-2022",
+        "descripcion": "Es la version mejorada y ampliada del GTA V aparecido en PS3 en 2013",
+        "valor_juego": 32000,
+        "empresa": "NAMCO Studios",
+        "valores_iniciales_juego": "GTA"
+    },
+    {
+        "id_juego": 10,
+        "nombre_juego": "Stranger of Paradise Final Fantasy Origin",
+        "fecha_lanzamiento": "18-03-2022",
+        "descripcion": "Este es un videojuego de accion",
+        "valor_juego": 85000,
+        "empresa": "NAMCO Studios",
+        "valores_iniciales_juego": "SPFO"
+    }
+]
+
