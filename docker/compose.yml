@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    container_name: mysql_container
+    image: mysql:5.7-oracle
+    environment:
+      MYSQL_DATABASE: db_videogames
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "9906:3306"
+  web:
+    image: php:8-apache-buster
+    container_name: php_web
+    depends_on:
+      - db
+    volumes:
+      - ../:/var/www/html/
+    ports:
+      - "8100:80"
+    stdin_open: true
+    tty: true
+
+# docker-compose -f php_mysql/compose.yml up
+
+# docker-php-ext-install mysqli
+# docker-php-ext-enable mysqli

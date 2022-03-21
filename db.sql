@@ -50,4 +50,12 @@ INSERT INTO `usuario_juego` (`ID`, `ID_USUARIO`, `ID_JUEGO`) VALUES
 ('5', '5', '552');
 
 
+CREATE TABLE login
+(ID INT(3) AUTO_INCREMENT,
+usuario VARCHAR(10) NOT NULL,
+password VARCHAR(10) NOT NULL, 
+FECHA_REGISTRO DATE NOT NULL,
+PRIMARY KEY (ID));
 
+INSERT INTO `login` (`usuario`, `password`, `FECHA_REGISTRO`) VALUES 
+('Jeniffer', '12456', '2022-03-14');
