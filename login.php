@@ -1,7 +1,7 @@
 <?php
 
 
-$dbhost = "localhost";
+$dbhost = "db";
 $dbuser = "root";
 $dbpass = "";
 $dbname = "db_videogames";

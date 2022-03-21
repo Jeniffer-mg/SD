@@ -80,6 +80,9 @@
                     $product = "<li class=\"producto\">
                         <div class=\"card text-center\">
                             <p class=\"articulo font-weight-bold card-header\">{$value['nombre_juego']} <i class=\"fas fa-tag\"></i></p>
+                            <p class=\"articulo_descripcion font-weight-bold card-header\">{$value['descripcion']}</p>
+                            <p class=\"articulo_empresa font-weight-bold card-header\"><strong>Empresa:</strong> {$value['empresa']}</p>
+                            <p class=\"articulo_fecha_lanzamiento font-weight-bold card-header\"><strong>Fecha de lanzamiento:</strong> {$value['fecha_lanzamiento']}</p>
                             <span class=\"precio text-muted\">{$value['valor_juego']}$</span>
                             <div class=\"card-footer\">
                                 <a href=\"#\" class=\"llevar-articulo btn btn-primary btn-block\" data-id=\"01\">Llevar <i class=\"fas fa-cart-arrow-down\"></i></a>
@@ -110,7 +113,6 @@
                         </div>";
                         echo $colProduct;
                 }
-                
             ?>
         </div>
     </div>
