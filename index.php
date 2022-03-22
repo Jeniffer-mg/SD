@@ -89,7 +89,7 @@ session_start();
                             <p class=\"articulo_fecha_lanzamiento font-weight-bold card-header\"><strong>Fecha de lanzamiento:</strong> {$value['fecha_lanzamiento']}</p>
                             <span class=\"precio text-muted\">{$value['valor_juego']}$</span>
                             <div class=\"card-footer\">
-                                <a href=\"#\" class=\"llevar-articulo btn btn-primary btn-block\" data-id=\"01\">Llevar <i class=\"fas fa-cart-arrow-down\"></i></a>
+                                <a href=\"#\" class=\"llevar-articulo btn btn-primary btn-block\" data-id=\"{$value['id_juego']}\">Llevar <i class=\"fas fa-cart-arrow-down\"></i></a>
                             </div>
                         </div>
                     </li>";
@@ -148,7 +148,7 @@ session_start();
                 <input type="hidden" name="NOMBRE" value="" id="NOMBRE">
                 <input type="hidden" name="DESCRIPCION" value="" id="DESCRIPCION">
                 <input type="hidden" name="VALOR" value="" id="VALOR">
-            <button type="button" class="btn btn-primary" id="pagar">Pagar <i class="fas fa-money-check-alt"></i></button>
+                <button type="submit" class="btn btn-primary" id="pagar">Pagar <i class="fas fa-money-check-alt"></i></button>
             </form>
         </div>
         </div>

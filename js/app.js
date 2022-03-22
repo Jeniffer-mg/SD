@@ -17,16 +17,16 @@ function cargarEventListeners(e) {
     // delecta si han hecho clicks para ejecuta la función.
     mercado.addEventListener("click", articuloTomado);
     cliente.addEventListener("click", sacarDeCarrito);
-    pagar.addEventListener("click", function () {
-        let articulosDeCliente = obtenerProductoLocalStorage();
-        if (articulosDeCliente.length == 0 ) {
-            alert("Seleccione productos para comprar.");
-        }else {
-            varciarLocalStorage();
-            alert("Gracias por su compra!!");
-            location.reload();
-        }
-    });
+    // pagar.addEventListener("click", function () {
+    //     let articulosDeCliente = obtenerProductoLocalStorage();
+    //     if (articulosDeCliente.length == 0 ) {
+    //         alert("Seleccione productos para comprar.");
+    //     }else {
+    //         varciarLocalStorage();
+    //         alert("Gracias por su compra!!");
+    //         location.reload();
+    //     }
+    // });
     // detecta si carrito (elementoHTML) es modificado para diparar función.
     carrito.addEventListener("DOMSubtreeModified", calcularTotal, true);
 }
@@ -50,11 +50,13 @@ function leerDatosDeArticulo(articulo) {
     // crea un objeto con los datos.
     const infoArticulo = {
         articulo: articulo.querySelector("p").textContent,
+        descripcion: articulo.querySelectorAll("p")[1].textContent,
+        empresa: articulo.querySelectorAll("p")[2].textContent.replace("Empresa: ", ""),
+        fecha: articulo.querySelectorAll("p")[3].textContent.replace("Fecha de lanzamiento: ", ""),
         precio: articulo.querySelector("span").textContent,
         id: articulo.querySelector("a").getAttribute("data-id"),
         cantidad: 1
     };
-    
     ponerEnCarrito(infoArticulo);
 }
 
@@ -71,11 +73,12 @@ function ponerEnCarrito(producto) {
     // notifa que ha sido agregado, guarda en LS y agrega al carrito.
     notificar("success");
     varciarLocalStorage();
+    document.getElementById("ID_JUEGO").value = producto.id;
+    document.getElementById("NOMBRE").value = producto.articulo;
+    document.getElementById("DESCRIPCION").value = producto.descripcion;
+    document.getElementById("VALOR").value = producto.precio;
     guardarProductoLocalStorage(producto);
-    if(carrito.childNodes.length>2)
-    carrito.removeChild(carrito.childNodes[0]);
-    console.log("carrito", carrito.childNodes);
-    carrito.innerHTML += template;
+    carrito.innerHTML = template;
 }
 
 // saca articulos o vacía el carrito.
