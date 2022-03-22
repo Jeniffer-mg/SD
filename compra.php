@@ -21,7 +21,24 @@ $sql = "INSERT INTO COMPRA(ID_USUARIO, ID_JUEGO, NOMBRE, DESCRIPCION, VALOR) VAL
 $sql .= "($id_usuario, $id_juego, '$nombre_juego', '$descripcion_juego', $precio_juego)";
 $result = mysqli_query($conn, $sql);
 if($result) {
-    echo "Compra exitosa";
+    echo "<h3>Compra exitosa</h3>";
+    $sql = "SELECT * FROM COMPRA WHERE ID_USUARIO = $id_usuario;";
+    $result = mysqli_query($conn, $sql);
+    echo "<table border='1'>";
+    echo "<tr>
+    <th>NOMBRE</th>
+    <th>DESCRIPCION</th>
+    <th>VALOR</th>
+  </tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr>";
+        echo "<td>{$row['NOMBRE']}</td>";
+        echo "<td>{$row['DESCRIPCION']}</td>";
+        echo "<td>{$row['VALOR']}</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+
 } else {
     echo "error comprando".mysqli_error($conn);
 }
