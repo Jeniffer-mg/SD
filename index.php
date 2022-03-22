@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,7 +143,13 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <form action="compra.php" method="post">
+                <input type="hidden" name="ID_JUEGO" value="" id="ID_JUEGO">
+                <input type="hidden" name="NOMBRE" value="" id="NOMBRE">
+                <input type="hidden" name="DESCRIPCION" value="" id="DESCRIPCION">
+                <input type="hidden" name="VALOR" value="" id="VALOR">
             <button type="button" class="btn btn-primary" id="pagar">Pagar <i class="fas fa-money-check-alt"></i></button>
+            </form>
         </div>
         </div>
     </div>

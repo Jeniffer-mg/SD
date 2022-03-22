@@ -70,7 +70,11 @@ function ponerEnCarrito(producto) {
 
     // notifa que ha sido agregado, guarda en LS y agrega al carrito.
     notificar("success");
+    varciarLocalStorage();
     guardarProductoLocalStorage(producto);
+    if(carrito.childNodes.length>2)
+    carrito.removeChild(carrito.childNodes[0]);
+    console.log("carrito", carrito.childNodes);
     carrito.innerHTML += template;
 }
 
