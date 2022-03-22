@@ -16,9 +16,9 @@ $id_juego = $_POST["ID_JUEGO"];
 $nombre_juego = $_POST["NOMBRE"];
 $descripcion_juego = $_POST["DESCRIPCION"];
 $precio_juego = $_POST["VALOR"];
-echo "id usuario: ".$id_usuario;
+$precio_juego= rtrim($precio_juego, "$");
 $sql = "INSERT INTO COMPRA(ID_USUARIO, ID_JUEGO, NOMBRE, DESCRIPCION, VALOR) VALUES ";
-$sql .= "($id_usuario, $id_juego, '$nombre_juego', '$descripcion_juego', $precio_juego);"
+$sql .= "($id_usuario, $id_juego, '$nombre_juego', '$descripcion_juego', $precio_juego)";
 $result = mysqli_query($conn, $sql);
 if($result) {
     echo "Compra exitosa";

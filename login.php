@@ -19,7 +19,7 @@ $query = mysqli_query($conn, "SELECT * FROM USUARIO WHERE USUARIO = '".$nombre."
 $nr = mysqli_num_rows($query);
 if($nr == 1){
     $user=mysqli_fetch_row($query);
-    $_SESSION["user_id"]=$user["ID"];
+    $_SESSION["user_id"]=$user[0];
     //header ("Location: index.html")
     header('Location: index.php');
 } else if ($nr == 0){
