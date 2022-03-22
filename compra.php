@@ -16,7 +16,21 @@ $id_juego = $_POST["ID_JUEGO"];
 $nombre_juego = $_POST["NOMBRE"];
 $descripcion_juego = $_POST["DESCRIPCION"];
 $precio_juego = $_POST["VALOR"];
-$precio_juego= rtrim($precio_juego, "$");
+$precio_juego = rtrim($precio_juego, "$");
+
+$str = file_get_contents('./descuentos.json', true);
+$json = json_decode($str, true);
+$descuentos = array();
+foreach ($json as $value) {
+    $descuentos[$value['id_juego']] = $value['descuento'];
+}
+
+if(array_key_exists($id_juego, $descuentos)) {
+    $descuento = 1 - (intval($descuentos[$id_juego]) / 100);
+    $precio_juego = intval($precio_juego) * $descuento;
+}
+
+
 $sql = "INSERT INTO COMPRA(ID_USUARIO, ID_JUEGO, NOMBRE, DESCRIPCION, VALOR) VALUES ";
 $sql .= "($id_usuario, $id_juego, '$nombre_juego', '$descripcion_juego', $precio_juego)";
 $result = mysqli_query($conn, $sql);
