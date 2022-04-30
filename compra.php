@@ -44,6 +44,11 @@ if($result) {
     <th>DESCRIPCION</th>
     <th>VALOR</th>
   </tr>";
+
+  $log = date("Y-m-d H:i:s")." - Compra realizada. Id usuario: $id_usuario, Nombre juego: $nombre_juego \n"
+  $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+  fwrite($myfile, $log);
+
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
         echo "<td>{$row['NOMBRE']}</td>";

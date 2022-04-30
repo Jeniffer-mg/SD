@@ -1,0 +1,8 @@
+2022-04-30 03:43:59 - Falla inicio de sesion. Nombre: jhsadhja password: dsfasd
+2022-04-30 03:45:12 - Falla inicio de sesion. Nombre: Jeniffer password: erwrw
+2022-04-30 03:48:16 - Inicio de sesion. Id usuario: 1
+2022-04-30 05:12:01 - Falla inicio de sesion. Nombre: Jeniffer password: rew
+2022-04-30 05:13:30 - Falla inicio de sesion. Nombre: Jeniffer password: rew
+2022-04-30 05:13:43 - Falla inicio de sesion. Nombre: Jeniffer password: rew
+2022-04-30 05:14:40 - Falla inicio de sesion. Nombre: Jeniffer password: rew
+2022-04-30 05:14:50 - Inicio de sesion. Id usuario: 1
