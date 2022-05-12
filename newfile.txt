@@ -6,3 +6,8 @@
 2022-04-30 05:13:43 - Falla inicio de sesion. Nombre: Jeniffer password: rew
 2022-04-30 05:14:40 - Falla inicio de sesion. Nombre: Jeniffer password: rew
 2022-04-30 05:14:50 - Inicio de sesion. Id usuario: 1
+2022-05-12 05:38:21 - Inicio de sesion. Id usuario: 1
+2022-05-12 05:54:36 - Inicio de sesion. Id usuario: 1
+2022-05-12 06:00:55 - Compra realizada. Id usuario: 1, Nombre juego: FORZA  
+2022-05-12 06:04:30 - Compra realizada. Id usuario: 1, Nombre juego: Stranger of Paradise Final Fantasy Origin  
+2022-05-12 06:34:02 - Inicio de sesion. Id usuario: 1

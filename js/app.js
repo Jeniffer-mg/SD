@@ -35,7 +35,7 @@ function cargarEventListeners(e) {
 
 // Toma el articulo.
 function articuloTomado(e) {
-    e.preventDefault();   
+    e.preventDefault();
 
     let articulo;
     if ( e.target.classList.contains("llevar-articulo") ) {
