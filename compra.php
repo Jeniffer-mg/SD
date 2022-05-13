@@ -33,6 +33,7 @@ if(array_key_exists($id_juego, $descuentos)) {
 
 $sql = "INSERT INTO COMPRA(ID_USUARIO, ID_JUEGO, NOMBRE, DESCRIPCION, VALOR) VALUES ";
 $sql .= "($id_usuario, $id_juego, '$nombre_juego', '$descripcion_juego', $precio_juego)";
+try {
 $result = mysqli_query($conn, $sql);
 if($result) {
     echo "<h3>Compra exitosa</h3>";
@@ -61,5 +62,10 @@ if($result) {
 } else {
     echo "error comprando".mysqli_error($conn);
 }
-
+} catch (mysqli_sql_exception $err) {
+    $log = date("Y-m-d H:i:s")." - Error en la conexión con la base de datos. base de datos 2\n";
+            $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+            fwrite($myfile, $log);
+            echo('Tenemos problemas con el servidor, por favor, vuelva a intentarlo más tarde');
+}
 ?>

@@ -11,3 +11,30 @@
 2022-05-12 06:00:55 - Compra realizada. Id usuario: 1, Nombre juego: FORZA  
 2022-05-12 06:04:30 - Compra realizada. Id usuario: 1, Nombre juego: Stranger of Paradise Final Fantasy Origin  
 2022-05-12 06:34:02 - Inicio de sesion. Id usuario: 1
+2022-05-12 21:44:21 - Falla inicio de sesion. Nombre:  password: 
+2022-05-12 22:09:27 - Falla inicio de sesion. Nombre:  password: 
+2022-05-12 22:31:13 - Falla inicio de sesion. Nombre:  password: 
+2022-05-12 22:31:16 - Falla inicio de sesion. Nombre:  password: 
+2022-05-12 22:32:31 - Inicio de sesion. Id usuario: 2
+2022-05-12 22:32:54 - Compra realizada. Id usuario: 2, Nombre juego: Dead Island 2  
+2022-05-12 22:33:39 - Inicio de sesion. Id usuario: 1
+2022-05-12 22:33:59 - Compra realizada. Id usuario: 1, Nombre juego: The Legend of Zelda  
+2022-05-12 22:34:10 - Compra realizada. Id usuario: 1, Nombre juego: The Legend of Zelda  
+2022-05-12 22:34:32 - Compra realizada. Id usuario: 1, Nombre juego: Stranger of Paradise Final Fantasy Origin  
+2022-05-12 22:34:44 - Compra realizada. Id usuario: 1, Nombre juego: FIFA  
+2022-05-12 22:41:14 - Falla inicio de sesion. Nombre: Jeniffer password: sdfghj
+2022-05-12 22:43:04 - Falla inicio de sesion. Nombre: Jeniffer password: sdfghj
+2022-05-12 22:43:20 - Inicio de sesion. Id usuario: 1
+2022-05-12 22:43:29 - Compra realizada. Id usuario: 1, Nombre juego: Dead Island 2  
+2022-05-12 22:44:01 - Falla inicio de sesion. Nombre: Edward password: ASDF
+2022-05-12 22:44:21 - Inicio de sesion. Id usuario: 4
+2022-05-12 22:44:34 - Compra realizada. Id usuario: 4, Nombre juego: Grand Theft Auto V  
+2022-05-12 22:48:51 - Compra realizada. Id usuario: 4, Nombre juego: Dead Island 2  
+2022-05-13 04:50:05 - Inicio de sesion. Id usuario: 1
+2022-05-13 04:58:24 - Error en la conexión con la base de datos. base de datos 1
+2022-05-13 05:03:54 - Error en la conexión con la base de datos. base de datos 1
+2022-05-13 05:06:58 - Error en la conexión con la base de datos. base de datos 1
+2022-05-13 05:13:21 - Error en la conexión con la base de datos. base de datos 1
+2022-05-13 05:17:09 - Inicio de sesion. Id usuario: 1
+2022-05-13 05:17:31 - Error en la conexión con la base de datos. base de datos 2
+2022-05-13 05:18:19 - Compra realizada. Id usuario: 1, Nombre juego: Grand Theft Auto V  
