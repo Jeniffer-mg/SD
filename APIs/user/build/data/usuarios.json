@@ -1,0 +1,22 @@
+[
+    {
+        "user": "usuario1",
+        "password": "pass1",
+        "role": "docente"
+    },
+    {
+        "user": "usuario2",
+        "password": "pass1",
+        "role": "docente"
+    },
+    {
+        "user": "usuario3",
+        "password": "pass1",
+        "role": "director"
+    },
+    {
+        "user": "usuario4",
+        "password": "pass1",
+        "role": "docente"
+    }
+]

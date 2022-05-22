@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "nota": 3.2,
+        "periodo": 2021
+    },
+    {
+        "id": 2,
+        "nombre": "Maria",
+        "apellido": "Alonso",
+        "nota": 4.5,
+        "periodo": 2022
+    },
+    {
+        "id": 3,
+        "nombre": "Lucas",
+        "apellido": "Villa",
+        "nota": 3.3,
+        "periodo": 2021
+    },
+    {
+        "id": 4,
+        "nombre": "Martha",
+        "apellido": "Guiza",
+        "nota": 4.1,
+        "periodo": 2022
+    },
+    {
+        "id": 5,
+        "nombre": "Marco",
+        "apellido": "Lopez",
+        "nota": 3.7,
+        "periodo": 2021
+    },
+    {
+        "id": 6,
+        "nombre": "Luis",
+        "apellido": "Castro",
+        "nota": 4.3,
+        "periodo": 2022
+    }
+]
