@@ -9,6 +9,16 @@ const app = (0, express_1.default)();
 const port = 9909;
 app.use(express_1.default.json({ limit: '1mb' }));
 app.use(express_1.default.urlencoded({ limit: '1mb', extended: true }));
+app.use((_req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // NOSONAR
+    res.header('Access-Control-Allow-Headers', // NOSONAR
+    'Authorization, X-API-KEY, Origin, X-Requested-With,' +
+        'Content-Type, Accept, Access-Control-Allow-Request-Method' // NOSONAR
+    );
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE'); // NOSONAR
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE'); // NOSONAR
+    next();
+});
 app.post('/login', (req, res) => {
     const body = req.body;
     const username = body.user;

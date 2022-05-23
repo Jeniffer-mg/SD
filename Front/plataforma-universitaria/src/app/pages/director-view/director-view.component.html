@@ -1,0 +1,5 @@
+
+<div *ngFor="let item of graficos" class="container">
+    <h4>{{item.periodo}}</h4>
+    <app-grafico-barras [List]="item.grafico"></app-grafico-barras>
+</div>

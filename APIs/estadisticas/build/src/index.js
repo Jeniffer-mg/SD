@@ -7,6 +7,16 @@ const express_1 = __importDefault(require("express"));
 const estudiantes_json_1 = __importDefault(require("../data/estudiantes.json"));
 const app = (0, express_1.default)();
 const port = 9911;
+app.use((_req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // NOSONAR
+    res.header('Access-Control-Allow-Headers', // NOSONAR
+    'Authorization, X-API-KEY, Origin, X-Requested-With,' +
+        'Content-Type, Accept, Access-Control-Allow-Request-Method' // NOSONAR
+    );
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE'); // NOSONAR
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE'); // NOSONAR
+    next();
+});
 app.get('/estadistica/promedio-notas', (_req, res) => {
     res.send(manageData());
 });
